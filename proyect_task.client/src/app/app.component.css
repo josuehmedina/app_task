@@ -1,0 +1,17 @@
+:host {
+    max-width: 1280px;
+    padding: 2rem;
+    text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black; /* Bordes de la tabla */
+}
+
+th, td {
+  border: 1px solid black; /* Bordes de las celdas */
+  padding: 8px;
+  text-align: left;
+}

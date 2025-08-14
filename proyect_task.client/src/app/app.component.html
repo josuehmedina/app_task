@@ -1,0 +1,28 @@
+<h1 id="tableLabel">Tareas</h1>
+
+<p>Agregar Nueva Tarea:</p>
+<div>
+  <input type="text" [(ngModel)]="nuevaTareaNombre" placeholder="Nueva tarea" />
+  <button (click)="agregarTarea()">Agregar</button>
+</div>
+<br />
+<p *ngIf="!tareas"></p>
+
+<table *ngIf="tareas">
+    <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>IsCompleted</th>
+          <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tarea of tareas">
+        <td>{{ tarea.id }}</td>
+        <td>{{ tarea.title }}</td>
+        <td><input type="checkbox" [(ngModel)]="tarea.isCompleted" (change)="actualizarEstatus(tarea)" />{{ tarea.isCompleted ? 'complete' : 'no complete' }}</td>
+        <td><button (click)="eliminarTarea(tarea.id)">eliminar</button></td>
+      </tr>
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+# Carpetas de Visual Studio
+.vs/
+*.vsidx
+
+# Archivos binarios compilados
+bin/
+obj/
+
+# Archivos de dependencias
+node_modules/
+
+# Archivos temporales
+*.log
