@@ -10,6 +10,7 @@ using proyect_task.Server.Models;
 
 namespace proyect_task.Server.Controllers
 {
+    //metodos basicos de CRUD de la api
     [Route("api/[controller]")]
     [ApiController]
     public class TareasController : ControllerBase
